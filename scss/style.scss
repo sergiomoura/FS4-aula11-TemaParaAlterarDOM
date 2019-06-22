@@ -77,4 +77,12 @@ body {
 			}
 		}
 	}
+
+	.imagem {
+		background-image: url(../img/top-bg.jpg);
+		background-attachment: fixed;
+		background-size: 1024px auto;
+		height: 280px;
+		background-position: center 250px;
+	}
 }
