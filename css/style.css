@@ -36,28 +36,47 @@ body {
     background-color: #DCE775;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 48px; }
-    body nav button {
-      border: none;
-      background-color: transparent; }
-  body section article {
-    background-color: #FFFFFF;
-    padding: 20px;
-    text-align: center; }
-    body section article i {
-      font-size: 48px !important; }
+    overflow-y: hidden; }
+    body nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+      body nav ul li {
+        display: block; }
+        body nav ul li a {
+          display: block;
+          padding: 10px 20px;
+          text-decoration: none;
+          color: #33691E;
+          text-align: center; }
+          body nav ul li a:hover {
+            background-color: #33691E;
+            color: #FFF; }
+  body section {
+    margin: 0 auto;
+    max-width: 960px; }
+    body section article {
+      background-color: #FFFFFF;
+      padding: 20px;
+      text-align: center; }
+      body section article i {
+        font-size: 48px !important; }
   body .imagem {
     background-image: url(../img/top-bg.jpg);
     background-attachment: fixed;
     background-size: auto 100vh;
     height: 280px;
-    background-position: center 0; }
+    background-position: center 0;
+    transition: background-size 6s linear; }
+    body .imagem:hover {
+      background-size: auto 110vh; }
   body .depoimento {
     font-family: "Indie Flower", cursive;
-    padding: 20px; }
+    padding: 20px;
+    max-width: 960px; }
     body .depoimento div {
-      text-align: center; }
+      text-align: center;
+      font-size: 1.5rem; }
     body .depoimento span {
       display: block;
       text-align: right;
@@ -65,7 +84,34 @@ body {
   body footer {
     background-color: #DCE775;
     padding: 20px; }
+    body footer div {
+      max-width: 960px; }
     body footer div:first-child {
       margin-bottom: 20px; }
+
+@media (min-width: 640px) {
+  body nav {
+    display: block;
+    justify-content: unset;
+    overflow-y: hidden; }
+    body nav ul {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center; }
+      body nav ul li {
+        display: inline-block; }
+        body nav ul li a {
+          display: inline-block; }
+  body .calls {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0; }
+    body .calls article {
+      width: calc(33% - 10px);
+      border-radius: 10px; }
+  body footer section {
+    display: flex;
+    justify-content: space-between; } }
 
 /*# sourceMappingURL=style.css.map */

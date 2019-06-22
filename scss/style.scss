@@ -4,8 +4,9 @@
 $cor-fundo-2: #FFFFFF;
 $cor-fundo-1: #EEEEEE;
 $cor-primaria: #DCE775;
-$cor-secundaria: #AFB42B;
+$cor-secundaria: #33691E;
 $cor-fonte:#333;
+$max-width:960px;
 
 $font-engracada: 'Indie Flower', cursive;
 $font-normal: 'Poppins',sans-serif;
@@ -49,20 +50,39 @@ body {
 	}
 
 	nav {
-
 		background-color: $cor-primaria;
 		display: flex;
 		justify-content: center;
-		align-items: center;
-		height: 48px;
+		overflow-y: hidden;
 
-		button {
-			border: none;
-			background-color: transparent;
+		ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+
+				li {
+					display: block;
+
+					a {
+						display: block;
+						padding: 10px 20px;
+						text-decoration: none;
+						color:$cor-secundaria;
+						text-align: center;
+
+						&:hover {
+							background-color: $cor-secundaria;
+							color:#FFF;
+						}
+					}
+				}
+				
 		}
 	}
 
 	section {
+		margin: 0 auto;
+		max-width: $max-width;
 		article {
 			background-color: $cor-fundo-2;
 			padding: 20px;
@@ -72,9 +92,6 @@ body {
 				font-size: 48px !important;
 			}
 
-			div {
-
-			}
 		}
 	}
 
@@ -84,15 +101,22 @@ body {
 		background-size: auto 100vh;
 		height: 280px;
 		background-position: center 0;
+		transition:  background-size 6s linear;
+		&:hover{
+			background-size: auto 110vh;
+		}
 	}
 
 	.depoimento {
 		
 		font-family: $font-engracada;
+		
 		padding: 20px;
+		max-width: $max-width;
 
 		div {
 			text-align: center;
+			font-size: 1.5rem;
 		}
 
 		span {
@@ -103,6 +127,10 @@ body {
 	}
 
 	footer {
+
+		div {
+			max-width: $max-width;
+		}
 		background-color: $cor-primaria;
 		padding: 20px;
 		div:first-child {
@@ -111,4 +139,48 @@ body {
 	}
 
 	
+}
+
+@media (min-width:640px){
+	body {
+
+		nav {
+			display: block;
+			justify-content: unset;
+			overflow-y: hidden;
+	
+			ul {
+				max-width: $max-width;
+				margin: 0 auto;
+				display: flex;
+				justify-content: center;
+				li {
+					display: inline-block;
+	
+					a {
+						display: inline-block;
+					}
+				}
+					
+			}
+		}
+	
+		.calls {
+			display: flex;
+			justify-content: space-between;
+			padding: 20px 0;
+			article {
+				width:calc(33% - 10px);
+				border-radius: 10px;
+			}
+		}
+	
+		footer {
+			section {
+				display: flex;
+				justify-content: space-between;
+			}
+		}
+
+	}
 }
