@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+* {
+  box-sizing: border-box; }
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #EEEEEE;
+  color: #333;
+  font-family: "Poppins", sans-serif; }
+  body header {
+    font-family: "Indie Flower", cursive;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #FFF;
+    font-size: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    padding: 20px;
+    text-shadow: 2px 2px 1px #000; }
+    body header::before {
+      content: '';
+      background-image: url("../img/top-bg.jpg");
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-position: center 0;
+      background-size: 800px auto;
+      filter: brightness(50%) grayscale(100%);
+      z-index: -1; }
+  body nav {
+    background-color: #DCE775;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px; }
+    body nav button {
+      border: none;
+      background-color: transparent; }
+  body section article {
+    background-color: #FFFFFF;
+    padding: 20px;
+    text-align: center; }
+    body section article i {
+      font-size: 48px !important; }
+
+/*# sourceMappingURL=style.css.map */
