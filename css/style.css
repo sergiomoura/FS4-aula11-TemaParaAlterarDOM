@@ -50,8 +50,22 @@ body {
   body .imagem {
     background-image: url(../img/top-bg.jpg);
     background-attachment: fixed;
-    background-size: 1024px auto;
+    background-size: auto 100vh;
     height: 280px;
-    background-position: center 250px; }
+    background-position: center 0; }
+  body .depoimento {
+    font-family: "Indie Flower", cursive;
+    padding: 20px; }
+    body .depoimento div {
+      text-align: center; }
+    body .depoimento span {
+      display: block;
+      text-align: right;
+      font-weight: bold; }
+  body footer {
+    background-color: #DCE775;
+    padding: 20px; }
+    body footer div:first-child {
+      margin-bottom: 20px; }
 
 /*# sourceMappingURL=style.css.map */

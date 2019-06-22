@@ -81,8 +81,34 @@ body {
 	.imagem {
 		background-image: url(../img/top-bg.jpg);
 		background-attachment: fixed;
-		background-size: 1024px auto;
+		background-size: auto 100vh;
 		height: 280px;
-		background-position: center 250px;
+		background-position: center 0;
 	}
+
+	.depoimento {
+		
+		font-family: $font-engracada;
+		padding: 20px;
+
+		div {
+			text-align: center;
+		}
+
+		span {
+			display: block;
+			text-align: right;
+			font-weight: bold;
+		}
+	}
+
+	footer {
+		background-color: $cor-primaria;
+		padding: 20px;
+		div:first-child {
+			margin-bottom:20px;
+		}
+	}
+
+	
 }
